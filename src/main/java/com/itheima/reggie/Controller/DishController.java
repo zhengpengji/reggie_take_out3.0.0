@@ -47,6 +47,7 @@ public class DishController {
 //        redisTemplate.delete(keys);
         String key = "dish_"+dishDto.getCategoryId()+"_1";
         redisTemplate.delete(key);
+        //
         return R.success("新增商品成功");
     }
 
