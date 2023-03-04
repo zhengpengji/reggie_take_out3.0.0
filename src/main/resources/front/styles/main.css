@@ -6,10 +6,10 @@
 }
 
 #main .divHead {
-  background: url(../images/mainBg.png);
+  background: url(../images/maing.png);
   background-repeat: no-repeat;
   height: 152rem;
-  background-size: contain;
+  background-size: cover;
 }
 
 #main .divHead img {
@@ -24,7 +24,7 @@
   width: 345rem;
   height: 118rem;
   opacity: 1;
-  background: #ffffff;
+  background:rgba(100, 100, 100, 0.1);
   border-radius: 6rem;
   box-shadow: 0rem 2rem 5rem 0rem rgba(69, 69, 69, 0.1);
   position: absolute;
@@ -47,7 +47,7 @@
 }
 
 #main .divTitle .divStatic .divDesc .divName {
-  width: 90rem;
+  width: 140rem;
   height: 25rem;
   opacity: 1;
   font-size: 18rem;

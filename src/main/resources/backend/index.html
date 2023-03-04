@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>瑞吉外卖管理端</title>
+    <title>电脑市场管理端</title>
     <link rel="shortcut icon" href="favicon.ico">
     <!-- 引入样式 -->
     <link rel="stylesheet" href="plugins/element-ui/index.css" />
@@ -16,6 +16,8 @@
         min-width: 1366px;
       }
       .app-main{
+        background-image: url("777777777777777.jpg");
+        background-size: cover;
         height: calc(100% - 64px);
       }
       .app-main .divTmp{
@@ -26,22 +28,24 @@
   </head>
 
   <body>
+
     <div class="app" id="app">
       <div class="app-wrapper openSidebar clearfix">
         <!-- sidebar -->
         <div class="sidebar-container">
           <div class="logo">
             <!-- <img src="images/logo.png" width="122.5" alt="" /> -->
-            <img src="images/login/login-logo.png" alt="" style="width: 117px; height: 32px" />
+            <img src="images/login/stumalllogo.png" alt="" style="width: 140px; height: 40px"/>
           </div>
-
+          <!--              #f3f4f7-->
+<!--          background-color="#343744"-->
           <el-scrollbar wrap-class="scrollbar-wrapper">
             <el-menu
               :default-active="defAct"
               :unique-opened="false"
               :collapse-transition="false"
-              background-color="#343744"
-              text-color="#bfcbd9"
+              background=#fff"
+              text-color="#272a36"
               active-text-color="#f4f4f5"
             >
               <div v-for="item in menuList" :key="item.id">
@@ -136,7 +140,7 @@
                   },
                   {
                     id: '4',
-                    name: '菜品管理',
+                    name: '商品管理',
                     url: 'page/food/list.html',
                     icon: 'icon-food'
                   },
@@ -152,6 +156,7 @@
                     url: 'page/order/list.html',
                     icon: 'icon-order'
                   }
+              ,
               //   ],
               // },
             ],
@@ -180,7 +185,7 @@
         methods: {
           logout() {
             logoutApi().then((res)=>{
-              if(res.code === 1){
+              if(res.code  === 1){
                 localStorage.removeItem('userInfo')
                 window.location.href = '/backend/page/login/login.html'
               }

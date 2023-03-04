@@ -22,13 +22,15 @@
           class="continue"
           @click="addClass('class')"
         >
-          + 新增菜品分类
+<!--          新增菜品分类-->
+          + 新增品牌
         </el-button>
         <el-button
           type="primary"
           @click="addClass('meal')"
         >
-          + 新增套餐分类
+<!--          新增套餐分类-->
+          + 新增优惠套餐
         </el-button>
       </div>
       <el-table
@@ -45,7 +47,8 @@
           label="分类类型"
         >
           <template slot-scope="scope">
-            <span>{{ scope.row.type == '1' ? '菜品分类': '套餐分类' }}</span>
+            <span>{{ scope.row.type == '1' ? '品牌': '优惠套餐' }}</span>
+<!--            菜品分类 套餐分类-->
           </template>
         </el-table-column>
         <el-table-column
